@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaho Motors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+       <!-- Header Section -->
+<header class="header">
+    <div class="logo-title">
+        <img src="https://i.postimg.cc/JhMTZ6QF/Picsart-24-09-19-00-10-38-239.jpg" alt="Vaho Motors Logo" class="logo"> <!-- Add your logo here -->
+        <div>
+            <h1>Vaho Motors</h1>
+            <p>Specialized in Petrol & Diesel Vehicle Mechanical Work, Power Steering & Pump Repair, Brake Drum Boring & Lathe Works.</p>
+            <p>Opp Public School Kpt Road, Basti Bawa Khel, Jalandhar</p>
+            <p>Contact: 9914922229 / 7035022229</p>
+        </div>
+    </div>
+</header>
+ 
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to Vaho Motors!</h2>
+        <p>Your car's health is in the hands of our expert car doctors. We take pride in providing the best services for all mechanical issues.</p>
+        <button class="cta-button">Book a Service Now</button>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Mechanical Work</li>
+            <li>Power Steering & Electric Steering Repair</li>
+            <li>Brake Drum Boring</li>
+            <li>Lathe Works</li>
+        </ul>
+    </section>
+
+    <!-- Form Section -->
+   <form action="https://formspree.io/f/mgvwjnjw" method="POST">
+    <label for="car-name">Car Name:</label>
+    <input type="text" id="car-name" name="car_name" required>
+
+    <label for="car-model">Car Model:</label>
+    <input type="text" id="car-model" name="car_model" required>
+
+    <label for="car-problem">Car Problem:</label>
+    <textarea id="car-problem" name="car_problem" required></textarea>
+
+    <label for="preferred-date">Preferred Service Date:</label>
+    <input type="date" id="preferred-date" name="service_date" required>
+
+    <label for="phone-number">Your Phone Number:</label>
+    <input type="tel" id="phone-number" name="phone_number" required>
+
+    <button type="submit" class="form-button">Submit for Repair</button>
+</form>
+</button>
+        </form>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="reviews-list">
+            <?php
+            // Read and display the reviews from reviews.txt
+            if (file_exists('reviews.txt')) {
+                echo nl2br(file_get_contents('reviews.txt'));
+            } else {
+                echo "No reviews yet. Be the first to leave a review!";
+            }
+            ?>
+        </div>
+
+        <form action="submit_review.php" method="POST">
+            <label for="reviewer-name">Your Name:</label>
+            <input type="text" id="reviewer-name" name="reviewer_name" required>
+
+            <label for="rating">Your Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" required></textarea>
+
+            <button type="submit" class="form-button">Submit Review</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+        <h2>Our Location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed/v1/place?q=Vaho+Motors,+Opp+Public+School+Kpt+Road,+Basti+Bawa+Khel,+Jalandhar&key=YOUR_API_KEY"
+            width="100%" height="300" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact: 9914922229 / 7035022229</p>
+    </footer>
+
+</body>
+</html>
