@@ -106,6 +106,27 @@ h2 {
     border: none;
     cursor: pointer;
 }
+/* FAQs Section Styling */
+.faqs-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
 
 /* Footer */
 footer {
